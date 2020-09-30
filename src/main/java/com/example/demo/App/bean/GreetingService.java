@@ -1,6 +1,6 @@
-package com.example.demo.bean;
+package com.example.demo.App.bean;
 
-import com.example.demo.lang.Language;
+import com.example.demo.App.lang.Language;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

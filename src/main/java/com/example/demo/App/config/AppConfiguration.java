@@ -1,8 +1,7 @@
-package com.example.demo.config;
+package com.example.demo.App.config;
 
-import com.example.demo.lang.Language;
-import com.example.demo.lang.impl.English;
-import com.example.demo.lang.impl.Vietnamese;
+import com.example.demo.App.lang.Language;
+import com.example.demo.App.lang.impl.English;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 /*@Configuration 	là một Annotation đánh dấu trên một Class cho phép Spring Boot
         biết được đây là nơi định nghĩa ra các Bean*/
 @Configuration
-@ComponentScan("com.example.demo.bean")
+@ComponentScan("com.example.demo.App.bean")
 public class AppConfiguration {
     @Bean(name = "language")
     public Language getLanguage(){

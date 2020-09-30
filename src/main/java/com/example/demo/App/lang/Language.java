@@ -1,4 +1,4 @@
-package com.example.demo.lang;
+package com.example.demo.App.lang;
 
 public interface Language {
     public String getGreeting();

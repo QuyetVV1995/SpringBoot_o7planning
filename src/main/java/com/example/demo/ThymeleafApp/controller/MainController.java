@@ -15,7 +15,7 @@ import java.util.List;
 
 @Controller
 public class MainController {
-   private static List<Person> persons = new ArrayList<Person>();
+   private static final List<Person> persons = new ArrayList<Person>();
    static {
        persons.add(new Person("Bill", "Gates"));
        persons.add(new Person("Nguyen", "A"));

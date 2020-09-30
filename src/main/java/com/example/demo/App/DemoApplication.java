@@ -1,13 +1,7 @@
-package com.example.demo;
+package com.example.demo.App;
 
-import com.example.demo.bean.GreetingService;
-import com.example.demo.bean.MyComponent;
-import com.example.demo.config.AppConfiguration;
-import com.example.demo.lang.Language;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
 public class DemoApplication {

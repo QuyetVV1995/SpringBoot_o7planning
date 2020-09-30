@@ -1,6 +1,6 @@
-package com.example.demo.lang.impl;
+package com.example.demo.App.lang.impl;
 
-import com.example.demo.lang.Language;
+import com.example.demo.App.lang.Language;
 
 public class English implements Language {
     @Override

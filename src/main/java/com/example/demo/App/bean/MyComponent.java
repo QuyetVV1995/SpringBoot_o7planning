@@ -1,4 +1,4 @@
-package com.example.demo.bean;
+package com.example.demo.App.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
