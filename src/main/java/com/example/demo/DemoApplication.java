@@ -15,7 +15,7 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		// Tạo ra một đối tượng ApplicationContext bằng cách đọc cấu hỉnh
 		// trong class AppConfiguration
-		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
+		/*ApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
 		System.out.println("----------------");
 		Language language = (Language)context.getBean("language");
 		System.out.println("Bean Language: " + language);
@@ -27,7 +27,8 @@ public class DemoApplication {
 
 		System.out.println("----------");
 		MyComponent myComponent = (MyComponent) context.getBean("myComponent");
-		myComponent.showAppInfo();
+		myComponent.showAppInfo();*/
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }
