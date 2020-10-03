@@ -30,4 +30,13 @@ public class ContactController {
         return "list";
     }
 
+    @GetMapping("/contact/search")
+    /*Giá trị trong @RequestParam chính là giá trị của thuộc tính name của input.*/
+    public String search(@RequestParam("term") String term, Model model){
+        if(StringUtils.isEmpty(term)){
+            return "redirect:/contact";
+        }
+        model.addAttribute("contacts", contactService.search(term));
+        return "list";
+    }
 }
