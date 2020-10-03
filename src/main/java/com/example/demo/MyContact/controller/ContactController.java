@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -61,6 +62,19 @@ public class ContactController {
         }
         contactService.save(contact);
         redirect.addFlashAttribute("successMessage", "Saved contact successfully!");
+        return "redirect:/contact";
+    }
+
+    @GetMapping("/contact/{id}/edit")
+    public String edit(@PathVariable("id") Integer id, Model model) {
+        model.addAttribute("contact", contactService.findUserById(id));
+        return "form";
+    }
+
+    @GetMapping("/contact/{id}/delete")
+    public String delete(@PathVariable int id, RedirectAttributes redirect) {
+        contactService.delete(id);
+        redirect.addFlashAttribute("successMessage", "Deleted contact successfully!");
         return "redirect:/contact";
     }
 }
