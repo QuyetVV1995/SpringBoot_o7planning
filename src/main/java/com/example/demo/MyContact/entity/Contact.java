@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Table(name = "contact") /*@Table xác định tên bảng CSDL.*/
 public class Contact {
     @Id     /*@Id xác định thuộc tính hiện tại là ID của bảng CSDL.*/
-    @GeneratedValue(strategy = GenerationType.AUTO) /*@GeneratedValue xác định cơ chế sinh khóa chính, ở đây là AUTO_INCREMENT.*/
+    @GeneratedValue(strategy = GenerationType.IDENTITY) /*@GeneratedValue xác định cơ chế sinh khóa chính.*/
     @Column(name = "id", nullable = false)  /*@Column xác định thuộc tính hiện tại là một cột của bảng CSDL.*/
     private Integer id;
 
