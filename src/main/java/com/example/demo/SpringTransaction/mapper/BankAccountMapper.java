@@ -6,6 +6,9 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/*Một lớp được sử dụng để ánh xạ (mapping) tương ứng 1-1
+giữa 1 cột trong câu truy vấn và 1 trường (field) trong lớp model được gọi là lớp mapper.
+ BankAccountMapper là một lớp như vậy.*/
 public class BankAccountMapper implements RowMapper<BankAccountInfo> {
     public static final String BASE_SQL  = "Select ba.Id, ba.Full_Name, ba.Balance From Bank_Account ba ";
     @Override

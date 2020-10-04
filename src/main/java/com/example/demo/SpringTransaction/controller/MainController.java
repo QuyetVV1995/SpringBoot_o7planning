@@ -7,6 +7,8 @@ import com.example.demo.SpringTransaction.model.BankAccountInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,7 +20,7 @@ public class MainController {
     @Autowired
     private BankAccountDAO bankAccountDAO;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @GetMapping("/")
     public String showBankAccounts(Model model) {
         List<BankAccountInfo> list = bankAccountDAO.getBankAccounts();
 
@@ -27,7 +29,7 @@ public class MainController {
         return "accountsPage";
     }
 
-    @RequestMapping(value = "/sendMoney", method = RequestMethod.GET)
+   @GetMapping("/sendMoney")
     public String viewSendMoneyPage(Model model) {
 
         SendMoneyForm form = new SendMoneyForm(1L, 2L, 700d);
@@ -37,7 +39,7 @@ public class MainController {
         return "sendMoneyPage";
     }
 
-    @RequestMapping(value = "/sendMoney", method = RequestMethod.POST)
+    @PostMapping("/sendMoney")
     public String processSendMoney(Model model, SendMoneyForm sendMoneyForm) {
 
         System.out.println("Send Money::" + sendMoneyForm.getAmount());
