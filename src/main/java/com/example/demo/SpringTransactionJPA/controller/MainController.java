@@ -3,7 +3,6 @@ package com.example.demo.SpringTransactionJPA.controller;
 
 import com.example.demo.SpringTransaction.exception.BankTransactionException;
 import com.example.demo.SpringTransactionJPA.dao.BankAccountDAO;
-import com.example.demo.SpringTransactionJPA.exception.BankTransactionExceptionJPA;
 import com.example.demo.SpringTransactionJPA.form.SendMoneyForm;
 import com.example.demo.SpringTransactionJPA.model.BankAccountInfo;
 import org.springframework.beans.factory.annotation.Autowired;
